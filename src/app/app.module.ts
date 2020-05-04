@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { DetailsFormComponent } from './details-form/details-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
