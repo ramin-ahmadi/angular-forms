@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DetailsFormComponent } from './details-form/details-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailsFormComponent
   ],
   imports: [
     BrowserModule,
@@ -17,3 +19,4 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
