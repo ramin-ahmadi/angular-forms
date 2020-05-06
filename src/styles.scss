@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import './assets/scss/variables.scss';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import '~@angular/material/theming';
+@include mat-core();
+$theme-primary: mat-palette($mat-primary, 500, 500, 500);
+$theme-accent: mat-palette($mat-accent, 500, 500, 500);
+$theme-tritary: mat-palette($mat-tritary, 500, 500, 500);
+$theme: mat-light-theme($theme-primary, $theme-accent, $theme-tritary);
+@include angular-material-theme($theme);
