@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-<form class="details-form">
+<form class="details-form" #detailsForm="ngForm">
   <div class="details-form__top">
     Details form
   </div>
@@ -15,4 +15,10 @@
   <button mat-flat-button color="accent">Save details</button>
 </form>
 </div>
+</div>
+<div class="container">
+  <div class="row">
+    <p>form information:</p>
+      {{detailsForm | json}}
+  </div>
 </div>
