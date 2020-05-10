@@ -31,7 +31,10 @@
       <mat-radio-button value="NotProvided">Prefer not to say</mat-radio-button>
     </mat-radio-group>
   </div>
-
+  <mat-form-field class="details-form__form-field">
+    <mat-label class="details-form__form-field__label">Address</mat-label>
+    <textarea  class="details-form__form-field__input" matInput placeholder="please enter address" value="" ngModel name="address"></textarea>
+  </mat-form-field>
   <button mat-flat-button color="accent">Save details</button>
 </form>
 </div>
