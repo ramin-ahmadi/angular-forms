@@ -6,15 +6,15 @@
   </div>
   <mat-form-field class="details-form__form-field">
     <mat-label class="details-form__form-field__label">First name</mat-label>
-    <input class="details-form__form-field__input" matInput placeholder="please enter first name" value="" ngModel name="firstName">
+    <input class="details-form__form-field__input" matInput placeholder="please enter first name" value="" [(ngModel)]="person.firstName" name="firstName">
   </mat-form-field>
   <mat-form-field class="details-form__form-field">
     <mat-label class="details-form__form-field__label">Last name</mat-label>
-    <input class="details-form__form-field__input" matInput placeholder="please enter last name" value="" ngModel name="lastName">
+    <input class="details-form__form-field__input" matInput placeholder="please enter last name" value="" [(ngModel)]="person.lastName" ngModel name="lastName">
   </mat-form-field>
   <mat-form-field class="details-form__form-field">
     <mat-label>Age</mat-label>
-    <mat-select name="age" ngModel>
+    <mat-select name="age" [(ngModel)]="person.age">
       <mat-option *ngFor="let age of ages" [value]="age" >
         {{age}}
       </mat-option>
@@ -22,7 +22,7 @@
   </mat-form-field>
   <div class="details-form__form-field">
     <label class="details-form__form-field__label">Pick your gender</label>
-    <mat-radio-group  aria-label="Select gender" ngModel name="genders" class="details-form__form-field__gender">
+    <mat-radio-group  aria-label="Select gender"  name="genders" class="details-form__form-field__gender" [(ngModel)]="person.gender">
       <mat-radio-button value="Male">Male</mat-radio-button>
       <mat-radio-button value="Female">Female</mat-radio-button>
       <mat-radio-button value="Neutral">Neutral</mat-radio-button>
@@ -31,10 +31,10 @@
   </div>
   <mat-form-field class="details-form__form-field">
     <mat-label class="details-form__form-field__label">Address</mat-label>
-    <textarea  class="details-form__form-field__input" matInput placeholder="please enter address" value="" ngModel name="address"></textarea>
+    <textarea  class="details-form__form-field__input" matInput placeholder="please enter address" value="" [(ngModel)]="person.Address" name="address"></textarea>
   </mat-form-field>
   <div class="details-form__form-field">
-    <mat-checkbox ngModel name="consented">I consent to disclose my personal information</mat-checkbox>
+    <mat-checkbox ngModel name="consented" [(ngModel)]="person.consented">I consent to disclose my personal information</mat-checkbox>
   </div>
   <button class="details-form__submit" mat-flat-button color="accent">Save details</button>
 </form>
