@@ -36,13 +36,8 @@
   <div class="details-form__form-field">
     <mat-checkbox ngModel name="consented" [(ngModel)]="person.consented">I consent to disclose my personal information</mat-checkbox>
   </div>
-  <button class="details-form__submit" mat-flat-button color="accent">Save details</button>
+  <button class="details-form__submit" mat-flat-button color="accent" (click)="onDetailsFormSubmit()">Save details</button>
 </form>
 </div>
 </div>
-<div class="container">
-  <div class="row">
-    <p>form information:</p>
-      {{detailsForm.value | json}}
-  </div>
-</div>
+

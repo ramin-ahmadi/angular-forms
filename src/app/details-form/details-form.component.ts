@@ -20,8 +20,11 @@ export class DetailsFormComponent implements OnInit {
     this.person.gender = 'Male';
     this.person.Address = 'Melbourne';
     this.person.consented = false;
-    // populating age array with 1 to 100 
+    // populating age array with 1 to 100
     this.ages = Array(100).fill(1).map((e,i)=>i+1);
   }
 
+  onDetailsFormSubmit(){
+    alert(JSON.stringify(this.person))
+  }
 }
