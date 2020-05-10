@@ -11,6 +11,7 @@ export class DetailsFormComponent implements OnInit {
   constructor() { }
 
   person: Person = new Person();
+  ages: number[] = [];
 
   ngOnInit() {
     this.person.firstName = 'Ramin';
@@ -19,6 +20,8 @@ export class DetailsFormComponent implements OnInit {
     this.person.gender = 'Male';
     this.person.Address = 'Melbourne';
     this.person.consented = false;
+    // populating age array with 1 to 100 
+    this.ages = Array(100).fill(1).map((e,i)=>i+1);
   }
 
 }
