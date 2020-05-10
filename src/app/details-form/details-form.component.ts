@@ -11,8 +11,14 @@ export class DetailsFormComponent implements OnInit {
   constructor() { }
 
   person: Person = new Person();
-  
+
   ngOnInit() {
+    this.person.firstName = 'Ramin';
+    this.person.lastName = 'Ahmadi';
+    this.person.age = 30;
+    this.person.gender = 'Male';
+    this.person.Address = 'Melbourne';
+    this.person.consented = false;
   }
 
 }
