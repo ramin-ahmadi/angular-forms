@@ -21,9 +21,7 @@
     </mat-select>
   </mat-form-field>
   <div class="details-form__form-field">
-    <div>
     <label class="details-form__form-field__label">Pick your gender</label>
-    </div>
     <mat-radio-group  aria-label="Select gender" ngModel name="genders" class="details-form__form-field__gender">
       <mat-radio-button value="Male">Male</mat-radio-button>
       <mat-radio-button value="Female">Female</mat-radio-button>
@@ -35,7 +33,10 @@
     <mat-label class="details-form__form-field__label">Address</mat-label>
     <textarea  class="details-form__form-field__input" matInput placeholder="please enter address" value="" ngModel name="address"></textarea>
   </mat-form-field>
-  <button mat-flat-button color="accent">Save details</button>
+  <div class="details-form__form-field">
+    <mat-checkbox ngModel name="consented">I consent to disclose my personal information</mat-checkbox>
+  </div>
+  <button class="details-form__submit" mat-flat-button color="accent">Save details</button>
 </form>
 </div>
 </div>
