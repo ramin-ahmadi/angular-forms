@@ -1,3 +1,4 @@
+import { Person } from './../data-model/person.model';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,4 +7,6 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   constructor() { }
+
+  postUserDetails(person: Person){}
 }
