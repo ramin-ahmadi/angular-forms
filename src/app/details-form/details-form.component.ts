@@ -1,3 +1,4 @@
+import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../data-model/person.model';
 
@@ -8,7 +9,7 @@ import { Person } from '../data-model/person.model';
 })
 export class DetailsFormComponent implements OnInit {
 
-  constructor() { }
+  constructor( private readonly dataService:DataService) { }
 
   person: Person = new Person();
   ages: number[] = [];
@@ -25,6 +26,15 @@ export class DetailsFormComponent implements OnInit {
   }
 
   onDetailsFormSubmit(){
-    alert(JSON.stringify(this.person))
+    this.dataService
+  .postUserDetails(this.person)
+  .subscribe(person => {
+    console.log('postUserDetails has been successful:' + person)
+    });
+    error => {
+      console.log ('postUserDetails post failed: '+ error)
+    }
   }
+
+
 }
