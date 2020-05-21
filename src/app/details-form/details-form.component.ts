@@ -29,10 +29,10 @@ export class DetailsFormComponent implements OnInit {
     this.dataService
   .postUserDetails(this.person)
   .subscribe(person => {
-    console.log('postUserDetails has been successful:' + person)
+    console.log('postUserDetails has been successful:', person)
     });
     error => {
-      console.log ('postUserDetails post failed: '+ error)
+      console.log ('postUserDetails post failed: ', error)
     }
   }
 

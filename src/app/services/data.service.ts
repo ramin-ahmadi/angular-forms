@@ -13,7 +13,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   postUserDetails(person: Person): Observable<Person>{
-    // return this.http.post<Person>('ApiUrl', person)
-    return of(person)
+    return this.http.post<Person>('https://putsreq.com/aEJaJyGeFRl7vzOj00sb', person)
+    //return of(person)
   }
 }
