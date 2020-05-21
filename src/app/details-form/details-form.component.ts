@@ -1,6 +1,7 @@
 import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../data-model/person.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-details-form',
@@ -9,7 +10,7 @@ import { Person } from '../data-model/person.model';
 })
 export class DetailsFormComponent implements OnInit {
 
-  constructor( private readonly dataService:DataService) { }
+  constructor( private readonly dataService:DataService, private _snackBar: MatSnackBar) { }
 
   person: Person = new Person();
   ages: number[] = [];
@@ -24,6 +25,10 @@ export class DetailsFormComponent implements OnInit {
   .postUserDetails(this.person)
   .subscribe(person => {
     console.log('postUserDetails has been successful:', person)
+      let message = person.firstName + '' + person.lastName + ' saved successfully';
+      this._snackBar.open(message,null, {
+        duration: 2000,
+      });
     });
     error => {
       console.log ('postUserDetails post failed: ', error)
