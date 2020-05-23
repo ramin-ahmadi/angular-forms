@@ -13,11 +13,13 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NotificationComponent } from './components/notification/notification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailsFormComponent
+    DetailsFormComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
