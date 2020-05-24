@@ -1,3 +1,4 @@
+import { NotificationData } from './../../data-model/components/notification.model';
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import { MAT_SNACK_BAR_DATA } from '@angular/material/snack-bar';
 
@@ -8,10 +9,10 @@ import { MAT_SNACK_BAR_DATA } from '@angular/material/snack-bar';
 })
 export class NotificationComponent implements OnInit {
 
-  constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) { }
+  constructor(@Inject(MAT_SNACK_BAR_DATA) public data: NotificationData) { }
 
   ngOnInit() {
-    console.log(this.data)
+ 
   }
 
 }
