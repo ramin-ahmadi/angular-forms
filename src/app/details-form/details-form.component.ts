@@ -38,6 +38,14 @@ export class DetailsFormComponent implements OnInit {
     });
     error => {
       console.log ('postUserDetails post failed: ', error)
+      let message = 'Save details has failed';
+      this._snackBar.openFromComponent(NotificationComponent, {
+        data: {
+          message: message,
+          success: false
+        },
+        duration: 3000,
+      });
     }
   }
 

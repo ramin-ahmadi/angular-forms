@@ -1,0 +1,10 @@
+@import './../../../assets/scss/variables.scss';
+
+.notification{
+  &__success{
+    color: $color-tritary;
+  }
+  &__fail{
+    color:$color-alert;
+  }
+}
