@@ -2,6 +2,7 @@ import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../data-model/person.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificationComponent } from '../components/notification/notification.component';
 
 @Component({
   selector: 'app-details-form',
@@ -21,13 +22,18 @@ export class DetailsFormComponent implements OnInit {
   }
 
   onDetailsFormSubmit(){
+
     this.dataService
   .postUserDetails(this.person)
   .subscribe(person => {
     console.log('postUserDetails has been successful:', person)
-      let message = person.firstName + '' + person.lastName + ' saved successfully';
-      this._snackBar.open(message,null, {
-        duration: 2000,
+      let message = person.firstName + ' ' + person.lastName + ' details has been saved successfully';
+      this._snackBar.openFromComponent(NotificationComponent, {
+        data: {
+          message: message,
+          success: true
+        },
+        duration: 3000,
       });
     });
     error => {

@@ -12,13 +12,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSnackBarModule, MAT_SNACK_BAR_DATA, MatSnackBarRef} from '@angular/material/snack-bar';
 import { NotificationComponent } from './components/notification/notification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailsFormComponent,
+    NotificationComponent
+  ],
+  entryComponents: [
     NotificationComponent
   ],
   imports: [
@@ -34,7 +37,16 @@ import { NotificationComponent } from './components/notification/notification.co
     MatCheckboxModule,
     MatSnackBarModule
   ],
-  providers: [],
+  providers: [{
+    provide: MatSnackBarRef,
+    useValue: {}
+    }, {
+    provide: MAT_SNACK_BAR_DATA,
+    useValue: {}
+    }],
+  exports: [
+    NotificationComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
