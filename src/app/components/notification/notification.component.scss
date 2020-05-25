@@ -3,8 +3,14 @@
 .notification{
   &__success{
     color: $color-tritary;
+    &::after{
+      content: '✔️';
+    }
   }
   &__fail{
     color:$color-alert;
+    &::after{
+      content: '❌';
+    }
   }
 }
