@@ -40,3 +40,14 @@
     margin-top:2rem;
   }
 }
+.ng-invalid:not(form).ng-touched{
+  .details-form__form-field__label{
+    color: $color-alert;
+    font-size: 1.2rem;
+  }
+
+  .details-form__form-field__input{
+    color: $color-alert;
+  }
+
+}

@@ -14,6 +14,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule, MAT_SNACK_BAR_DATA, MatSnackBarRef} from '@angular/material/snack-bar';
 import { NotificationComponent } from './components/notification/notification.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NotificationComponent } from './components/notification/notification.co
     MatSelectModule,
     MatRadioModule,
     MatCheckboxModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatFormFieldModule
   ],
   providers: [{
     provide: MatSnackBarRef,
