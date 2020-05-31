@@ -20,6 +20,10 @@
     flex-basis: 100%;
     flex-grow: 1;
 
+    &--block{
+      display: block;
+    }
+
     &__label{
       font-size: 1rem;
     }
